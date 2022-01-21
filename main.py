@@ -43,7 +43,7 @@ while True:
     if event == 'Clear':
         clear_input()
     if event == 'Submit':
-        df = df.append(values, ignore=True)
+        df = df.append(values, ignore_index=True)
         df.to_excel(EXCEL_FILE, index=False)
         sg.popup('Data Saved')
         clear_input()
